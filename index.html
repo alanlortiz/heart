@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Para Ti</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100svh;
+            color: white;
+        }
+
+        .pantalla {
+            text-align: center;
+            width: 100%;
+        }
+
+        .oculto {
+            display: none;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 10px;
+            background: crimson;
+            color: white;
+            cursor: pointer;
+        }
+
+        canvas {
+            width: 90vw;
+            max-width: 420px;
+            aspect-ratio: 1 / 1;
+            background: black;
+        }
+
+        #mensajeFinal {
+            margin-top: 16px;
+            font-size: 18px;
+            color: pink;
+            opacity: 0;
+            transition: opacity 2s;
+        }
+
+        #mensajeFinal.mostrar {
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Pantalla 1 -->
+    <div id="pantallaInicio" class="pantalla">
+        <button id="btnInicio">Presióname ❤️</button>
+    </div>
+
+    <!-- Pantalla 2 -->
+    <div id="pantallaCorazon" class="pantalla oculto">
+        <canvas id="canvas" width="400" height="400"></canvas>
+        <div id="mensajeFinal">Te quiero mucho 💖</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
